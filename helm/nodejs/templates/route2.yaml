@@ -1,0 +1,9 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: {{ .Values.name | quote }}
+spec:
+  host: janekhatunrecht.c007.1de1.apps.rohde-schwarz.com
+  to:
+    kind: Service
+    name: {{ .Values.name | quote }}
